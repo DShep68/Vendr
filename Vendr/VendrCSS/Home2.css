@@ -15,10 +15,6 @@
 
 }
 
-.nav-bar {
-  padding-left: 5%;
-  padding-right: 5%;
-}
 
 .row {
   display: flex;
@@ -42,8 +38,18 @@
   padding: 20px;
 }
 
+.quad-column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 4;
+  padding: 20px;
+}
+
 body {
   margin:auto;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 ul {
@@ -84,7 +90,7 @@ li a:hover {
 }
 
 .filtering{
-  width: 10%;
+  width: 40%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -169,4 +175,27 @@ li a:hover {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+}
+
+.machine img{
+  width: 275px;
+  height: 275px;
+}
+
+.machine{
+  width: 389px;
+  height: 549px;
+  border-radius: 10px;
+  background: rgba(211,211,211,0.05);
+  margin-left:20px;
+  margin-right:20px;
+  display: flex;
+justify-content: center;
+/* align horizontal */
+align-items: center;
+/* align vertical */
+}
+
+.machine:hover{
+  border: solid 1px #5b91e2;
 }
