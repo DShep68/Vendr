@@ -29,6 +29,10 @@
   flex-basis: 100%;
   flex: 1;
   padding: 20px;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
 }
 .double-column {
   display: flex;
@@ -190,12 +194,28 @@ li a:hover {
   margin-left:20px;
   margin-right:20px;
   display: flex;
-justify-content: center;
-/* align horizontal */
-align-items: center;
-/* align vertical */
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
 }
 
 .machine:hover{
   border: solid 1px #5b91e2;
+}
+
+.machine-title{
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+}
+
+.machine-floor{
+  color: #5b91e2;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
 }
