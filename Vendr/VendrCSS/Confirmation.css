@@ -1,0 +1,204 @@
+#fullHD {
+  z-index: 2;
+  width: 1920px;
+  height: 1080px;
+  background: #121212}
+
+#header {
+  z-index: 3;
+  width: 1706px;
+  height: 88px;
+}
+
+#vendr {
+  z-index: 4;
+  width: 214px;
+  height: 85px;
+  color: #5b91e2;
+  font-family: "Segoe UI";
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 96px;
+}
+
+#navigation {
+  z-index: 4;
+  width: 408px;
+  height: 46px;
+}
+
+#navigation {
+  z-index: 5;
+  width: 143px;
+  height: 44px;
+}
+
+#account {
+  z-index: 6;
+  width: 143px;
+  height: 44px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+#navigation {
+  z-index: 5;
+  width: 120px;
+  height: 22px;
+}
+
+#history {
+  z-index: 6;
+  width: 120px;
+  height: 22px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+#navigation {
+  z-index: 5;
+  width: 99px;
+  height: 39px;
+}
+
+#group {
+  z-index: 6;
+  width: 99px;
+  height: 39px;
+}
+
+#home {
+  z-index: 7;
+  width: 99px;
+  height: 22px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+#rectangle3 {
+  z-index: 7;
+  width: 79.7px;
+  height: 2px;
+  background: #0078d4;
+}
+
+#buttonsTex {
+  z-index: 3;
+  width: 115px;
+  height: 35px;
+}
+
+#surface {
+  z-index: 4;
+  width: 115px;
+  height: 35px;
+}
+
+#cONTAINERC {
+  z-index: 4;
+  width: 115px;
+  height: 35px;
+}
+
+#rectangle1 {
+  z-index: 5;
+  width: 115px;
+  height: 35px;
+  background: #59adff;
+}
+
+#tEXTCOLORS {
+  z-index: 4;
+  width: 99px;
+  height: 16px;
+}
+
+#create {
+  z-index: 5;
+  width: 99px;
+  height: 16px;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+}
+
+#confirmati {
+  z-index: 3;
+  width: 341.02px;
+  height: 525px;
+}
+
+#iconCheckC {
+  z-index: 4;
+  width: 339px;
+  height: 339px;
+}
+
+#mask {
+  z-index: 5;
+  width: 339px;
+  height: 339px;
+  background: #46c418;
+}
+
+#iconColor {
+  z-index: 5;
+  width: 406.8px;
+  height: 406.8px;
+}
+
+#rectangle {
+  z-index: 6;
+  width: 406.8px;
+  height: 406.8px;
+  background: rgba(0,0,0,0.54);
+}
+
+#thankYou {
+  z-index: 4;
+  width: 167.04px;
+  height: 48px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+#vendingCod {
+  z-index: 4;
+  width: 341.02px;
+  height: 48px;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+#vendingCod {
+  z-index: 4;
+  width: 220.36px;
+  height: 48px;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+}
