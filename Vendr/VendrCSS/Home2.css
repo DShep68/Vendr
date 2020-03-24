@@ -72,10 +72,11 @@ li a {
   line-height: 22px;
 }
 
-#test:hover {
-  width: 60%;
-  height: 1px;
-  margin: 0px auto;
-  opacity: unset;
+li a:hover {
+  color: #59adff;
+}
+
+.active{
   border-bottom: 1px solid #59adff;
+  margin-left: 10px;
 }
