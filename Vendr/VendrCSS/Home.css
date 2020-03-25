@@ -1,828 +1,221 @@
 #fullHD {
-  z-index: 2;
-  width: 1920px;
-  height: 1080px;
-  background: #121212}
-
-#vendingMac {
-  z-index: 3;
-  width: 1318.33px;
-  height: 686.76px;
-}
-
-#vendingMac {
-  z-index: 4;
-  width: 389px;
-  height: 549px;
-}
-
-#rectangle {
-  z-index: 5;
-  width: 389px;
-  height: 549px;
-  border-radius: 10px;
-  background: rgba(211,211,211,0.05);
-}
-
-#vendingMac {
-  z-index: 5;
-  width: 156.22px;
-  height: 88.6px;
-}
-
-#stFloor {
-  z-index: 6;
-  width: 147.78px;
-  height: 48px;
-  color: #5b91e2;
-  font-family: "Segoe UI";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-#founders {
-  z-index: 6;
-  width: 156.22px;
-  height: 48px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-#vendingMac {
-  z-index: 5;
-  width: 275px;
-  height: 275px;
-}
-
-#vendingMac {
-  z-index: 4;
-  width: 389px;
-  height: 549px;
-}
-
-#rectangle {
-  z-index: 5;
-  width: 389px;
-  height: 549px;
-  border-radius: 10px;
-  background: rgba(211,211,211,0.05);
-}
-
-#vendingMac {
-  z-index: 5;
-  width: 256.22px;
-  height: 88.6px;
-}
-
-#stFloor {
-  z-index: 6;
-  width: 147.78px;
-  height: 48px;
-  color: #5b91e2;
-  font-family: "Segoe UI";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-#campusCent {
-  z-index: 6;
-  width: 256.22px;
-  height: 48px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-#vendingMac {
-  z-index: 5;
-  width: 275px;
-  height: 275px;
-}
-
-#vendingMac {
-  z-index: 4;
-  width: 389px;
-  height: 549px;
-}
-
-#rectangle {
-  z-index: 5;
-  width: 389px;
-  height: 549px;
-  border-radius: 10px;
-  border: solid 1px #5b91e2
-  background: rgba(211,211,211,0.05);
-}
-
-#vendingMac {
-  z-index: 5;
-  width: 147.78px;
-  height: 88.6px;
-}
-
-#stFloor {
-  z-index: 6;
-  width: 147.78px;
-  height: 48px;
-  color: #5b91e2;
-  font-family: "Segoe UI";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-#salerno {
-  z-index: 6;
-  width: 127.37px;
-  height: 48px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 48px;
-}
-
-#vendingMac {
-  z-index: 5;
-  width: 275px;
-  height: 275px;
-}
-
-#scrollbarG {
-  z-index: 4;
-  width: 4px;
-  height: 679px;
-}
-
-#container {
-  z-index: 5;
-  width: 4px;
-  height: 679px;
-}
-
-#color {
-  z-index: 5;
-  width: 13px;
-  height: 679px;
-}
-
-#rectangle {
-  z-index: 6;
-  width: 13px;
-  height: 679px;
-  background: rgba(0,0,0,0.38);
-}
-
-#filteringS {
-  z-index: 3;
-  width: 253.11px;
-  height: 709.05px;
-}
-
-#snacks {
-  z-index: 4;
-  width: 252.89px;
-  height: 160.05px;
-}
-
-#snickersSe {
-  z-index: 5;
-  width: 121.36px;
-  height: 32px;
-}
-
-#snickers {
-  z-index: 6;
-  width: 86.24px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#tonalPalet {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle1 {
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  background: #5b91e2;
-}
-
-#laysChipsS {
-  z-index: 5;
-  width: 144.55px;
-  height: 32px;
-}
-
-#laysChips {
-  z-index: 6;
-  width: 110.43px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-  background: rgba(0,0,0,0.38);
-}
-
-#snacks {
-  z-index: 5;
-  width: 97px;
-  height: 36px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-#scrollbarG {
-  z-index: 5;
-  width: 4px;
-  height: 153px;
-}
-
-#container {
-  z-index: 6;
-  width: 4px;
-  height: 153px;
-}
-
-#color {
-  z-index: 6;
-  width: 4px;
-  height: 153px;
-}
-
-#rectangle {
-  z-index: 7;
-  width: 4px;
-  height: 153px;
-  background: rgba(0,0,0,0.38);
-}
-
-#drinks {
-  z-index: 4;
-  width: 252.89px;
-  height: 160.05px;
-}
-
-#coca-Cola {
-  z-index: 5;
-  width: 143.88px;
-  height: 32px;
-}
-
-#coca-Cola {
-  z-index: 6;
-  width: 108.76px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#tonalPalet {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle1 {
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  background: #5b91e2;
-}
-
-#pepsiSelec {
-  z-index: 5;
-  width: 90.22px;
-  height: 32px;
-}
-
-#pepsi {
-  z-index: 6;
-  width: 56.1px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-  background: rgba(0,0,0,0.38);
-}
-
-#drinks {
-  z-index: 5;
-  width: 74px;
-  height: 36px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-#scrollbarG {
-  z-index: 5;
-  width: 4px;
-  height: 153px;
-}
-
-#container {
-  z-index: 6;
-  width: 4px;
-  height: 153px;
-}
-
-#color {
-  z-index: 6;
-  width: 4px;
-  height: 153px;
-}
-
-#rectangle {
-  z-index: 7;
-  width: 4px;
-  height: 153px;
-  background: rgba(0,0,0,0.38);
-}
-
-#location {
-  z-index: 4;
-  width: 252.89px;
-  height: 160.05px;
-}
-
-#campusCent {
-  z-index: 5;
-  width: 197.33px;
-  height: 32px;
-}
-
-#campusCent {
-  z-index: 6;
-  width: 162.21px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#tonalPalet {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle1 {
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  background: #5b91e2;
-}
-
-#salernoSel {
-  z-index: 5;
-  width: 113.44px;
-  height: 32px;
-}
-
-#salerno {
-  z-index: 6;
-  width: 79.31px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-  background: rgba(0,0,0,0.38);
-}
-
-#location {
-  z-index: 5;
-  width: 107px;
-  height: 37px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-#scrollbarG {
-  z-index: 5;
-  width: 4px;
-  height: 153px;
-}
-
-#container {
-  z-index: 6;
-  width: 4px;
-  height: 153px;
-}
-
-#color {
-  z-index: 6;
-  width: 4px;
-  height: 153px;
-}
-
-#rectangle {
-  z-index: 7;
-  width: 4px;
-  height: 153px;
-  background: rgba(0,0,0,0.38);
-}
-
-#categories {
-  z-index: 4;
-  width: 135px;
-  height: 120px;
-}
-
-#snacksSele {
-  z-index: 5;
-  width: 106.86px;
-  height: 32px;
-}
-
-#snacks {
-  z-index: 6;
-  width: 71.74px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#tonalPalet {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle1 {
-  z-index: 10;
-  width: 36px;
-  height: 36px;
-  background: #5b91e2;
-}
-
-#drinkSelec {
-  z-index: 5;
-  width: 100.8px;
-  height: 32px;
-}
-
-#drinks {
-  z-index: 6;
-  width: 66.68px;
-  height: 32px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
-}
-
-#selectionC {
-  z-index: 6;
-  width: 27px;
-  height: 27px;
-}
-
-#checkbox {
-  z-index: 7;
-  width: 27px;
-  height: 27px;
-}
-
-#ic_check_b {
-  z-index: 8;
-  width: 27px;
-  height: 27px;
-}
-
-#iconColor {
-  z-index: 8;
-  width: 36px;
-  height: 36px;
-}
-
-#rectangle {
-  z-index: 9;
-  width: 36px;
-  height: 36px;
-  background: rgba(0,0,0,0.38);
-}
-
-#categories {
-  z-index: 5;
-  width: 135px;
-  height: 37px;
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 32px;
-}
-
-#header {
-  z-index: 3;
-  width: 1706px;
-  height: 88px;
+  background: #121212;
+  display: inline-block;
 }
 
 #vendr {
-  z-index: 4;
-  width: 214px;
-  height: 85px;
-  color: #5b91e2;
+  color: #59adff;
   font-family: "Segoe UI";
   font-size: 72px;
   font-weight: 700;
   line-height: 96px;
+  margin: 0px;
+  float: left;
+  flex: 2;
+
 }
 
-#navigation {
-  z-index: 4;
-  width: 408px;
-  height: 46px;
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-#navigation {
-  z-index: 5;
-  width: 143px;
-  height: 44px;
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 20px;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
+}
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2;
+  padding: 20px;
 }
 
-#account {
-  z-index: 6;
-  width: 143px;
-  height: 44px;
+.quad-column{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 4;
+  padding: 20px;
+}
+
+body {
+  margin:auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   color: #ffffff;
   font-family: "Segoe UI";
   font-size: 36px;
   font-weight: 400;
   line-height: 22px;
-  text-align: center;
 }
 
-#navigation {
-  z-index: 5;
-  width: 120px;
-  height: 22px;
+li a:hover {
+  color: #59adff;
 }
 
-#history {
-  z-index: 6;
-  width: 120px;
-  height: 22px;
+.active{
+  border-bottom: 1px solid #59adff;
+  margin-left: 10px;
+}
+
+.filtering{
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.items{
+  padding-top: 10px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 24px;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2.5px solid black;
+  border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color:#2196F3;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.category-title{
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.machine img{
+  width: 275px;
+  height: 275px;
+}
+
+.machine{
+  width: 389px;
+  height: 549px;
+  border-radius: 10px;
+  background: rgba(211,211,211,0.05);
+  margin-left:20px;
+  margin-right:20px;
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
+}
+
+.machine:hover{
+  border: solid 1px #5b91e2;
+}
+
+.machine-title{
   color: #ffffff;
   font-family: "Segoe UI";
   font-size: 36px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: center;
+  font-weight: 700;
+  line-height: 48px;
 }
 
-#navigation {
-  z-index: 5;
-  width: 99px;
-  height: 39px;
-}
-
-#group {
-  z-index: 6;
-  width: 99px;
-  height: 39px;
-}
-
-#home {
-  z-index: 7;
-  width: 99px;
-  height: 22px;
-  color: #ffffff;
+.machine-floor{
+  color: #5b91e2;
   font-family: "Segoe UI";
   font-size: 36px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: center;
-}
-
-#rectangle3 {
-  z-index: 7;
-  width: 79.7px;
-  height: 2px;
-  background: #0078d4;
+  font-weight: 700;
+  line-height: 48px;
 }
