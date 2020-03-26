@@ -1,3 +1,24 @@
+<?php
+//echo "Connecting?";
+$servername = "10.200.2.17";
+$username = "vendr";
+$password = "vendr";
+$dbname = 'vendr';
+$dbport = '3306';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname, $dbport);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+
+
+?> 
+
 <html id="fullHD">
   <head>
     <meta charset="UTF-8">
@@ -9,7 +30,7 @@
     <div id="fullLogin">
       <h3 id="createAcco"> Create Account </h3>
         <div id="loginInfor">
-          <form action="">
+          <form action="Submit.php" Method = "POST">
             <input type="text" id="firstName" name="firstName" placeholder="First Name"><br>
             <input type="text" id="lastName" name="lastName" placeholder="Last Name"><br>
             <input type="text" id="email" name="email" placeholder="Email"><br>
@@ -20,4 +41,7 @@
         </div>
     </div>
   </body>
+
+  
+
 </html>
