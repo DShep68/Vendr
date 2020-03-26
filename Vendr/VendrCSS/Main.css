@@ -48,6 +48,8 @@
   flex-basis: 100%;
   flex: 4;
   padding: 20px;
+  align-items: center;
+  /* align vertical */
 }
 
 body {
