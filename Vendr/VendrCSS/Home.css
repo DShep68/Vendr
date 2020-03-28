@@ -105,6 +105,10 @@
   /* align vertical */
 }
 
+.machines{
+  padding-bottom: 20px;
+}
+
 .machine:hover{
   border: solid 1px #5b91e2;
 }

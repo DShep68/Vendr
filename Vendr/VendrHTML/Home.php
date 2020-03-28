@@ -22,11 +22,19 @@ while($row = mysqli_fetch_assoc($result)) {
   $types[] = $row["ItemType"];
 }
 #echo $types[1];
-#testing
+
+#grabbing locations
 $sql = "SELECT DISTINCT Location FROM machine";
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_assoc($result)) {
-  $types[] = $row["Location"];
+  $locations[] = $row["Location"];
+}
+
+#grabbing drinks/snacks
+$sql = "SELECT DISTINCT ItemName FROM item";
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $drinksSnacks[] = $row["ItemName"];
 }
 #echo $types[1];
 ?>
@@ -83,19 +91,23 @@ while($row = mysqli_fetch_assoc($result)) {
             <div class="category-title">Location
             </div>
             <div class="items">
-              <label class="container">One
+              <label class="container"><?php echo $locations[0] ?>
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Two
+              <label class="container"><?php echo $locations[1] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Three
+              <label class="container"><?php echo $locations[2] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Four
+              <label class="container"><?php echo $locations[3] ?>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"><?php echo $locations[4] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
@@ -104,19 +116,23 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="filtering">
             <div class="category-title">Drinks</div>
             <div class="items">
-              <label class="container">One
+              <label class="container"><?php echo $drinksSnacks[0] ?>
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Two
+              <label class="container"><?php echo $drinksSnacks[1] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Three
+              <label class="container"><?php echo $drinksSnacks[2] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Four
+              <label class="container"><?php echo $drinksSnacks[3] ?>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"><?php echo $drinksSnacks[9] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
@@ -125,25 +141,30 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="filtering">
             <div class="category-title">Snacks</div>
             <div class="items">
-              <label class="container">One
+              <label class="container"><?php echo $drinksSnacks[4] ?>
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Two
+              <label class="container"><?php echo $drinksSnacks[5] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Three
+              <label class="container"><?php echo $drinksSnacks[6] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Four
+              <label class="container"><?php echo $drinksSnacks[7] ?>
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+              <label class="container"><?php echo $drinksSnacks[8] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
             </div>
           </div>
         </div>
+
         <div class="quad-column">
           <div class="machines">
             <div class="row">
@@ -151,7 +172,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 <a href="../VendrHTML/Machine.html">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
-                    <label class="machine-title">Salerno</label>
+                    <label class="machine-title"><?php echo $locations[0] ?></label>
                     <label class="machine-floor">1st Floor</label>
                   </div>
                 </a>
@@ -160,7 +181,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 <a href="../VendrHTML/Machine.html">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
-                    <label class="machine-title">Campus Center</label>
+                    <label class="machine-title"><?php echo $locations[1] ?></label>
                     <label class="machine-floor">1st Floor</label>
                   </div>
                 </a>
@@ -169,7 +190,30 @@ while($row = mysqli_fetch_assoc($result)) {
                 <a href="../VendrHTML/Machine.html">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
-                    <label class="machine-title">Founders</label>
+                    <label class="machine-title"><?php echo $locations[2] ?></label>
+                    <label class="machine-floor">1st Floor</label>
+                  </div>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+          <div class="machines">
+            <div class="row">
+            <div class="machine">
+                <a href="../VendrHTML/Machine.html">
+                  <div class="column">
+                    <img src="../VendrIMG/machine.png" alt="Machine">
+                    <label class="machine-title"><?php echo $locations[3] ?></label>
+                    <label class="machine-floor">1st Floor</label>
+                  </div>
+                </a>
+              </div>
+              <div class="machine">
+                <a href="../VendrHTML/Machine.html">
+                  <div class="column">
+                    <img src="../VendrIMG/machine.png" alt="Machine">
+                    <label class="machine-title"><?php echo $locations[4] ?></label>
                     <label class="machine-floor">1st Floor</label>
                   </div>
                 </a>
@@ -179,6 +223,5 @@ while($row = mysqli_fetch_assoc($result)) {
         </div>
       </div>
     </div>
-
   </body>
 </html>
