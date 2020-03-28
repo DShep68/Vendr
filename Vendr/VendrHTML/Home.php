@@ -22,7 +22,7 @@ while($row = mysqli_fetch_assoc($result)) {
   $types[] = $row["ItemType"];
 }
 #echo $types[1];
-
+#testing
 $sql = "SELECT DISTINCT Location FROM machine";
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_assoc($result)) {
