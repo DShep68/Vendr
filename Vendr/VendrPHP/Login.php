@@ -14,7 +14,7 @@
             <input type="text" id="password" name="password" placeholder="Password"><br><br>
             <input type="submit" id="login" value="Login">
           </form>
-          <a href="../VendrHTML/CreateAccount.html"> Create Account</a>
+          <a href="../VendrPHP/CreateAccount.php"> Create Account</a>
         </div>
     </div>
   </body>

@@ -38,7 +38,7 @@ echo "Connected successfully";
             <input type="text" id="password" name="password" placeholder="Password"><br><br>
             <input type="submit" id="create" value="Create">
           </form>
-          <a href="../VendrHTML/Login.html"> Login Here</a>
+          <a href="../VendrPHP/Login.php"> Login Here</a>
         </div>
     </div>
   </body>
