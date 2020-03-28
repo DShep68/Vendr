@@ -69,9 +69,9 @@ function itemImagePuller($item){
         </div>
         <div class="column">
           <ul>
-            <li><a class="active" href="../VendrHTML/Home.html">Home</a></li>
-            <li><a href="../VendrHTML/History.html">History</a></li>
-            <li><a href="../VendrHTML/Account.html">Account</a></li>
+            <li><a class="active" href="../VendrPHP/Home.php">Home</a></li>
+            <li><a href="../VendrPHP/History.php">History</a></li>
+            <li><a href="../VendrPHP/Account.php">Account</a></li>
           </ul>
         </div>
       </div>
