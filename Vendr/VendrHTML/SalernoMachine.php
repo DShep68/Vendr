@@ -211,7 +211,6 @@ function itemImagePuller($item){
                 </div>
               </div>
             </div>
-             -->
           </div>
          
         </div>
