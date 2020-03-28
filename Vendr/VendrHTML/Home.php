@@ -1,3 +1,35 @@
+<?php
+
+$servername = "10.200.2.17";
+$username = "vendr";
+$password = "vendr";
+$dbname = 'vendr';
+$dbport = '3306';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname, $dbport);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+#echo "Connected successfully <br>";
+
+#grabbing snack types to populate sidebar
+$sql = "SELECT DISTINCT ItemType FROM item";
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $types[] = $row["ItemType"];
+}
+#echo $types[1];
+
+$sql = "SELECT DISTINCT Location FROM machine";
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $types[] = $row["Location"];
+}
+#echo $types[1];
+?>
 <html id="fullHD">
   <head>
     <meta charset="UTF-8">
@@ -10,7 +42,7 @@
     <div class="nav-bar">
       <div class="row">
         <div class="double-column">
-          <h2 id="vendr">VendrHello</h2>
+          <h2 id="vendr">Vendr</h2>
         </div>
         <div class="column">
           <ul>
@@ -27,14 +59,15 @@
           <div class="filtering">
             <div class="category-title">Categories</div>
             <div class="items">
-              <label class="container">One
+              <label class="container"><?php echo $types[0] ?>
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>
               </label>
-              <label class="container">Two
+              <label class="container"><?php echo $types[1] ?>
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
+              <!--
               <label class="container">Three
                 <input type="checkbox">
                 <span class="checkmark"></span>
@@ -43,6 +76,7 @@
                 <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
+              -->
             </div>
           </div>
           <div class="filtering">
