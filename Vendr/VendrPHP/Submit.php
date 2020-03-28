@@ -18,7 +18,7 @@ echo "Connected successfully";
   $sql ="INSERT INTO customer (CustomerFName, CustomerLName, CustomerEmail, CustomerUser, CustomerPass) VALUES ('$_POST[firstName]','$_POST[lastName]','$_POST[email]','$_POST[userName]','$_POST[password]')";
   if (mysqli_query($conn,$sql)) {
       echo "User created successfully";
-      header("Location: Login.html");
+      header("Location: Login.php");
     } else {
       echo "<br>";
       die('Error: ' . mysqli_error());

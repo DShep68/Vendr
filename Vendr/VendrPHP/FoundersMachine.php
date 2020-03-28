@@ -53,6 +53,48 @@ function itemImagePuller($item){
 }
 ?>
 
+<script>
+function quantUpdaterItem1() {
+  var x = document.getElementById("number").value;
+  document.getElementById("item1Inventory").innerHTML = 'x' + x ;
+ // findTotal();
+}
+
+function quantUpdaterItem2() {
+  var y = document.getElementById("number1").value;
+  document.getElementById("item2Inventory").innerHTML = 'x' + y ;
+  //findTotal();
+}
+
+function quantUpdaterItem3() {
+  var z = document.getElementById("number2").value;
+  document.getElementById("item3Inventory").innerHTML = 'x' + z ;
+ // findTotal();
+}
+
+function quantUpdaterItem4() {
+  var a = document.getElementById("number3").value;
+  document.getElementById("item4Inventory").innerHTML = 'x' + a ;
+ // findTotal();
+}
+
+function findTotal(){
+  var itemOne = document.getElementById('number').value;
+  var itemTwo = document.getElementById('number1').value;
+  var itemThree = document.getElementById('number2').value;
+  var itemFour = document.getElementById('number3').value;
+  //console.log(itemOne + itemTwo + itemThree + itemFour);
+  var itemPriceOne = <?php echo $itemPrice[0]; ?>;
+  var itemPriceTwo = <?php echo $itemPrice[1]; ?>;
+  var itemPriceThree = <?php echo $itemPrice[2]; ?>;
+  var itemPriceFour = <?php echo $itemPrice[3]; ?>;
+  //console.log(itemPriceOne + ',' + itemPriceTwo+ ',' + itemPriceThree+ ',' + itemPriceFour);
+  var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
+ console.log(total);
+  document.getElementById('totalPrice').innerHTML = total;
+}
+</script>
+
 <html id="fullHD">
   <head>
     <meta charset="UTF-8">
@@ -85,32 +127,32 @@ function itemImagePuller($item){
               <div class="item">
                 <div class="column">
                   <?php itemImagePuller($itemName[0]);     ?>
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price"><?php echo $itemPrice[0]?></label>
+                  <input class="item-quant" type="number" placeholder="0" step="1" min="0" max="10" id="number" onclick='quantUpdaterItem1()'>
+                  <label class="item-price" id='itemPriceOne'><?php echo $itemPrice[0]?></label>
                   <label class="item-counter"><?php echo $inventroy[0]?></label>
                 </div>
               </div>
               <div class="item">
                 <div class="column">
                 <?php itemImagePuller($itemName[1]);     ?>
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price"><?php echo $itemPrice[1]?></label>
+                  <input class="item-quant" type="number" placeholder="0" step="1" min="0" max="10" id="number1" onclick='quantUpdaterItem2()'>
+                  <label class="item-price" id='itemPriceTwo'><?php echo $itemPrice[1]?></label>
                   <label class="item-counter"><?php echo $inventroy[1]?></label>
                 </div>
               </div>
               <div class="item">
                 <div class="column">
                 <?php itemImagePuller($itemName[2]);     ?>
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price"><?php echo $itemPrice[2]?></label>
+                  <input class="item-quant" type="number" placeholder="0" step="1" min="0" max="10" id="number2" onclick='quantUpdaterItem3()'>
+                  <label class="item-price" id='itemPriceThree'><?php echo $itemPrice[2]?></label>
                   <label class="item-counter"><?php echo $inventroy[2]?></label>
                 </div>
               </div>
               <div class="item">
                 <div class="column">
                 <?php itemImagePuller($itemName[3]);     ?>
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price"><?php echo $itemPrice[3]?></label>
+                  <input class="item-quant" type="number" placeholder="0" step="1" min="0" max="10" id="number3" onclick= 'quantUpdaterItem4()'>
+                  <label class="item-price" id='itemPriceFour'><?php echo $itemPrice[3]?></label>
                   <label class="item-counter"><?php echo $inventroy[3]?></label>
                 </div>
               </div>
@@ -217,54 +259,76 @@ function itemImagePuller($item){
 
           <div class="cart-column">
             <label class="item-counter">Added to Cart</label>
+            <form action="checkout.php" method="post">
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
                   <p class="cart-item-name">
-                    Pepsi
+                    <?php echo $itemName[0]; ?>
                   </p>
-                  <p class="cart-item-quantity">
-                    x4
-                  </p>
+
+                  <p class="cart-item-quantity" id='item1Inventory'> </p>
+
                   <p class="cart-item-price">
-                    $4
+                  <?php echo $itemPrice[0]; ?>
                   </p>
+
                 </div>
                 <div class="cart-item-row">
                   <p class="cart-item-name">
-                    Pepsi
+                      <?php echo $itemName[1]; ?>
                   </p>
-                  <p class="cart-item-quantity">
-                    x4
-                  </p>
+
+                  <p class="cart-item-quantity" id='item2Inventory'> </p>
+
                   <p class="cart-item-price">
-                    $4
+                  <?php echo $itemPrice[1]; ?>
                   </p>
+
                 </div>
                 <div class="cart-item-row">
                   <p class="cart-item-name">
-                    Pepsi
+                    <?php echo $itemName[2]; ?>
                   </p>
-                  <p class="cart-item-quantity">
-                    x4
-                  </p>
+
+                  <p class="cart-item-quantity" id='item3Inventory'> </p>
+
                   <p class="cart-item-price">
-                    $4
+                  <?php echo $itemPrice[2]; ?>
                   </p>
+
+                </div>
+                <div class="cart-item-row">
+                  <p class="cart-item-name">
+                    <?php echo $itemName[3]; ?>
+                  </p>
+
+                  <p class="cart-item-quantity" id='item4Inventory'> </p>
+<script>
+  
+
+</script>
+                  <p class="cart-item-price">
+                  <?php echo $itemPrice[3]; ?>
+                  </p>
+
                 </div>
               </div>
             </div>
+            </form>
             <div class="total-row">
               <p class="total">
                 Total
               </p>
-              <p class="total-price">
-                $12
+              <p class="total-price" id="totalPrice">
+
               </p>
             </div>
-            <form action="">
-              <input type="submit" id="pay" value="Pay Here">
-            </form>
+            
+            <input type="submit" id="pay" value="Pay Here" onclick = "findTotal()">
+            <!--<form action="findTotal()">
+              
+            </form> -->
           </div>
       </div>
     </div>

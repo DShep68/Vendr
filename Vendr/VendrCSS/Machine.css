@@ -36,6 +36,14 @@
   padding-left: 10px;
   border: none;
 }
+.item-quant{
+  border-radius: 10px;
+  width: 50;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+}
+
 
 .cart-column{
   display: flex;

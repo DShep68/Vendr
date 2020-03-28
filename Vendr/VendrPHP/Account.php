@@ -1,3 +1,9 @@
+<?php
+
+require_once 'LoginCheck.php';
+echo $username;
+?>
+
 <html id="fullHD">
   <head>
     <meta charset="UTF-8">
@@ -41,7 +47,7 @@
               UserName
             </label>
             <p>
-              MarkIV
+              <?php echo $user; ?>
             </p>
             <label>
               Password

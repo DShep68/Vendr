@@ -9,7 +9,7 @@
     <div id="fullLogin">
       <h3 id="loginTitle"> Login </h3>
         <div id="loginInfor">
-          <form action="">
+          <form action="LoginCheck.php" method="post">
             <input type="text" id="userName" name="userName" placeholder="User Name"><br>
             <input type="text" id="password" name="password" placeholder="Password"><br><br>
             <input type="submit" id="login" value="Login">
