@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 #grabbing snack types to populate sidebar
 $sql = "SELECT item.ItemID,item.ItemPrice,item.ItemName,inventory.Quanity
 FROM item ,inventory
-WHERE  item.ItemID =inventory.ItemID;";
+WHERE  item.ItemID =inventory.ItemID AND inventory.MachineID = 1;";
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_assoc($result)) {
   $itemID[] = $row["ItemType"];
@@ -26,7 +26,31 @@ while($row = mysqli_fetch_assoc($result)) {
   $itemName[] = $row["ItemName"];
   $inventroy[] = $row["Quanity"];
 }
-
+function itemImagePuller($item){
+  if($item =='Pepsi'){
+    echo' <img src="../VendrIMG/pepsi.png" alt="pepsi">';
+  }elseif($item == 'Coke'){
+    echo' <img src="../VendrIMG/coke.jpg" alt="pepsi">';
+  }elseif($item == 'Sprite'){
+    echo' <img src="../VendrIMG/sprite.png" alt="pepsi">';
+  }elseif($item == 'Fanta'){
+    echo' <img src="../VendrIMG/fanta.jpg" alt="pepsi">';
+  }elseif($item == 'Lays Chips'){
+    echo' <img src="../VendrIMG/lays.jpg" alt="pepsi">';
+  }elseif($item == 'HeartWorm Gummies'){
+    echo' <img src="../VendrIMG/gummies.jpg" alt="pepsi">';
+  }elseif($item == 'Fritos'){
+    echo' <img src="../VendrIMG/fritos.jpg" alt="pepsi">';
+  }elseif($item == 'Poptart'){
+    echo' <img src="../VendrIMG/poptart.jpg" alt="pepsi">';
+  }elseif($item == 'Cookies'){
+    echo' <img src="../VendrIMG/cookies.jpg" alt="pepsi">';
+  }elseif($item == 'White Claw'){
+    echo' <img src="../VendrIMG/whiteclaw.jpg" alt="pepsi">';
+  }else{
+    echo'you fucked up the function call bro';
+  }
+}
 ?>
 
 <html id="fullHD">
@@ -60,7 +84,7 @@ while($row = mysqli_fetch_assoc($result)) {
             <div class="row">
               <div class="item">
                 <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                  <?php itemImagePuller($itemName[0]);     ?>
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
                   <label class="item-price"><?php echo $itemPrice[0]?></label>
                   <label class="item-counter"><?php echo $inventroy[0]?></label>
@@ -68,102 +92,128 @@ while($row = mysqli_fetch_assoc($result)) {
               </div>
               <div class="item">
                 <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                <?php itemImagePuller($itemName[1]);     ?>
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
+                  <label class="item-price"><?php echo $itemPrice[1]?></label>
+                  <label class="item-counter"><?php echo $inventroy[1]?></label>
                 </div>
               </div>
               <div class="item">
                 <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                <?php itemImagePuller($itemName[2]);     ?>
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
+                  <label class="item-price"><?php echo $itemPrice[2]?></label>
+                  <label class="item-counter"><?php echo $inventroy[2]?></label>
                 </div>
               </div>
               <div class="item">
                 <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                <?php itemImagePuller($itemName[3]);     ?>
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
+                  <label class="item-price"><?php echo $itemPrice[3]?></label>
+                  <label class="item-counter"><?php echo $inventroy[3]?></label>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="item-module">
+          
+            <div class="row">
+         
+              <div class="item">
+                
+                <div class="column">
+                <!--
+                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
+                  <label class="item-price">$4</label>
+                  <label class="item-counter">x4</label>
+                    -->
+                </div>
+              </div>
+              <div class="item">
+                <div class="column">
+                   <!--
+                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
+                  <label class="item-price">$4</label>
+                  <label class="item-counter">x4</label>
+                    -->
+                </div>
+              </div>
+              <div class="item">
+                <div class="column">
+                   <!--
+                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
+                  <label class="item-price">$4</label>
+                  <label class="item-counter">x4</label>
+                    -->
+                </div>
+              </div>
+              <div class="item">
+                <div class="column">
+                   <!--
+                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
+                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
+                  <label class="item-price">$4</label>
+                  <label class="item-counter">x4</label>
+                    -->
+                </div>
+                
+              </div>
+             
+            </div>
+           
+          </div>
+          <div class="item-module">
+         
             <div class="row">
               <div class="item">
                 <div class="column">
+                   <!--
                   <img src="../VendrIMG/pepsi.png" alt="pepsi">
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
                   <label class="item-price">$4</label>
                   <label class="item-counter">x4</label>
+                    -->
                 </div>
               </div>
               <div class="item">
                 <div class="column">
+                   <!--
                   <img src="../VendrIMG/pepsi.png" alt="pepsi">
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
                   <label class="item-price">$4</label>
                   <label class="item-counter">x4</label>
+                    -->
                 </div>
               </div>
               <div class="item">
                 <div class="column">
+                   <!--
                   <img src="../VendrIMG/pepsi.png" alt="pepsi">
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
                   <label class="item-price">$4</label>
                   <label class="item-counter">x4</label>
+                    -->
                 </div>
               </div>
               <div class="item">
                 <div class="column">
+                   <!--
                   <img src="../VendrIMG/pepsi.png" alt="pepsi">
                   <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
                   <label class="item-price">$4</label>
                   <label class="item-counter">x4</label>
+                    -->
                 </div>
               </div>
             </div>
+             -->
           </div>
-          <div class="item-module">
-            <div class="row">
-              <div class="item">
-                <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
-                </div>
-              </div>
-              <div class="item">
-                <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
-                </div>
-              </div>
-              <div class="item">
-                <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
-                </div>
-              </div>
-              <div class="item">
-                <div class="column">
-                  <img src="../VendrIMG/pepsi.png" alt="pepsi">
-                  <input type="number" placeholder="0" step="1" min="0" max="10" id="number">
-                  <label class="item-price">$4</label>
-                  <label class="item-counter">x4</label>
-                </div>
-              </div>
-            </div>
-          </div>
+         
         </div>
 
           <div class="cart-column">
