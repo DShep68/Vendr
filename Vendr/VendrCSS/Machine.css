@@ -11,6 +11,14 @@
   line-height: 32px;
 }
 
+.item-price{
+  color: #5b91e2;
+  font-family: "Segoe UI";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
 .item-double-column {
   display: flex;
   flex-direction: column;
