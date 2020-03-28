@@ -30,6 +30,13 @@ while($row = mysqli_fetch_assoc($result)) {
   $locations[] = $row["Location"];
 }
 
+#grabbing floors
+$sql = "SELECT DISTINCT floor FROM machine";
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $floors[] = $row["floor"];
+}
+
 #grabbing drinks/snacks
 $sql = "SELECT DISTINCT ItemName FROM item";
 $result = mysqli_query($conn,$sql);
@@ -169,29 +176,29 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="machines">
             <div class="row">
               <div class="machine">
-                <a href="../VendrHTML/Machine.html">
+                <a href="../VendrHTML/SalernoMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[0] ?></label>
-                    <label class="machine-floor">1st Floor</label>
+                    <label class="machine-floor">Floor: <?php echo $floors[0] ?></label>
                   </div>
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/Machine.html">
+                <a href="../VendrHTML/CampusCenterMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[1] ?></label>
-                    <label class="machine-floor">1st Floor</label>
+                    <label class="machine-floor">Floor: <?php echo $floors[1] ?></label>
                   </div>
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/Machine.html">
+                <a href="../VendrHTML/FoundersMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[2] ?></label>
-                    <label class="machine-floor">1st Floor</label>
+                    <label class="machine-floor">Floor: <?php echo $floors[0] ?></label>
                   </div>
                 </a>
               </div>
@@ -201,20 +208,29 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="machines">
             <div class="row">
             <div class="machine">
-                <a href="../VendrHTML/Machine.html">
+                <a href="../VendrHTML/PharmacyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[3] ?></label>
-                    <label class="machine-floor">1st Floor</label>
+                    <label class="machine-floor">Floor: <?php echo $floors[0] ?></label>
                   </div>
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/Machine.html">
+                <a href="../VendrHTML/KearnyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[4] ?></label>
-                    <label class="machine-floor">1st Floor</label>
+                    <label class="machine-floor">Floor: <?php echo $floors[0] ?></label>
+                  </div>
+                </a>
+              </div>
+              <div class="machine">
+                <a href="../VendrHTML/SalernoBMachine.php">
+                  <div class="column">
+                    <img src="../VendrIMG/machine.png" alt="Machine">
+                    <label class="machine-title"><?php echo $locations[0] ?></label>
+                    <label class="machine-floor">Floor: <?php echo $floors[1] ?></label>
                   </div>
                 </a>
               </div>

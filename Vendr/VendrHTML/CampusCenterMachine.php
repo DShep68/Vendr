@@ -1,3 +1,30 @@
+<?php
+
+$servername = "10.200.2.17";
+$username = "vendr";
+$password = "vendr";
+$dbname = 'vendr';
+$dbport = '3306';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname, $dbport);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+#echo "Connected successfully <br>";
+
+#grabbing snack types to populate sidebar
+$sql = "SELECT DISTINCT ItemType FROM item";
+$result = mysqli_query($conn,$sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $types[] = $row["ItemType"];
+}
+
+
+?>
+
 <html id="fullHD">
   <head>
     <meta charset="UTF-8">
