@@ -61,9 +61,9 @@ while($row = mysqli_fetch_assoc($result)) {
         </div>
         <div class="column">
           <ul>
-            <li><a class="active" href="../VendrHTML/Home.html">Home</a></li>
-            <li><a href="../VendrHTML/History.html">History</a></li>
-            <li><a href="../VendrHTML/Account.html">Account</a></li>
+            <li><a class="active" href="../VendrPHP/Home.php">Home</a></li>
+            <li><a href="../VendrPHP/History.php">History</a></li>
+            <li><a href="../VendrPHP/Account.php">Account</a></li>
           </ul>
         </div>
       </div>
@@ -176,7 +176,7 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="machines">
             <div class="row">
               <div class="machine">
-                <a href="../VendrHTML/SalernoMachine.php">
+                <a href="../VendrPHP/SalernoMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[0] ?></label>
@@ -185,7 +185,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/CampusCenterMachine.php">
+                <a href="../VendrPHP/CampusCenterMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[1] ?></label>
@@ -194,7 +194,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/FoundersMachine.php">
+                <a href="../VendrPHP/FoundersMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[2] ?></label>
@@ -208,7 +208,7 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="machines">
             <div class="row">
             <div class="machine">
-                <a href="../VendrHTML/PharmacyMachine.php">
+                <a href="../VendrPHP/PharmacyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[3] ?></label>
@@ -217,7 +217,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/KearnyMachine.php">
+                <a href="../VendrPHP/KearnyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[4] ?></label>
@@ -226,7 +226,7 @@ while($row = mysqli_fetch_assoc($result)) {
                 </a>
               </div>
               <div class="machine">
-                <a href="../VendrHTML/SalernoBMachine.php">
+                <a href="../VendrPHP/SalernoBMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
                     <label class="machine-title"><?php echo $locations[0] ?></label>

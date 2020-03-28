@@ -41,9 +41,9 @@ while($row = mysqli_fetch_assoc($result)) {
         </div>
         <div class="column">
           <ul>
-            <li><a class="active" href="../VendrHTML/Home.html">Home</a></li>
-            <li><a href="../VendrHTML/History.html">History</a></li>
-            <li><a href="../VendrHTML/Account.html">Account</a></li>
+            <li><a class="active" href="../VendrPHP/Home.html">Home</a></li>
+            <li><a href="../VendrPHP/History.html">History</a></li>
+            <li><a href="../VendrPHP/Account.html">Account</a></li>
           </ul>
         </div>
       </div>
