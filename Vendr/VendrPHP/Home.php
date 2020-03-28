@@ -74,8 +74,12 @@ while($row = mysqli_fetch_assoc($result)) {
           <div class="filtering">
             <div class="category-title">Categories</div>
             <div class="items">
+              <label class="container">Show All
+                <input type="checkbox" onclick="toggle(this);">
+                <span class="checkmark"></span>
+              </label>
               <label class="container"><?php echo $types[0] ?>
-                <input type="checkbox" checked="checked">
+                <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $types[1] ?>
@@ -99,23 +103,23 @@ while($row = mysqli_fetch_assoc($result)) {
             </div>
             <div class="items">
               <label class="container"><?php echo $locations[0] ?>
-                <input type="checkbox" checked="checked">
+                <input type="checkbox" rel="<?php echo $locations[0] ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $locations[1] ?>
-                <input type="checkbox">
+                <input type="checkbox" rel="<?php $locations[1] = str_replace(' ', '', $locations[1]); echo $locations[1]; ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $locations[2] ?>
-                <input type="checkbox">
+                <input type="checkbox" rel="<?php echo $locations[2] ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $locations[3] ?>
-                <input type="checkbox">
+                <input type="checkbox" rel="<?php echo $locations[3] ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $locations[4] ?>
-                <input type="checkbox">
+                <input type="checkbox" rel="<?php echo $locations[4] ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -124,7 +128,7 @@ while($row = mysqli_fetch_assoc($result)) {
             <div class="category-title">Drinks</div>
             <div class="items">
               <label class="container"><?php echo $drinksSnacks[0] ?>
-                <input type="checkbox" checked="checked">
+                <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $drinksSnacks[1] ?>
@@ -149,7 +153,7 @@ while($row = mysqli_fetch_assoc($result)) {
             <div class="category-title">Snacks</div>
             <div class="items">
               <label class="container"><?php echo $drinksSnacks[4] ?>
-                <input type="checkbox" checked="checked">
+                <input type="checkbox">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $drinksSnacks[5] ?>
@@ -175,7 +179,7 @@ while($row = mysqli_fetch_assoc($result)) {
         <div class="quad-column">
           <div class="machines">
             <div class="row">
-              <div class="machine">
+              <div class="machine <?php echo $locations[0] ?>">
                 <a href="../VendrPHP/SalernoMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -184,7 +188,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine">
+              <div class="machine <?php $locations[1] = str_replace(' ', '', $locations[1]); echo $locations[1]; ?>">
                 <a href="../VendrPHP/CampusCenterMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -193,7 +197,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine">
+              <div class="machine <?php echo $locations[2] ?>">
                 <a href="../VendrPHP/FoundersMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -202,12 +206,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              
-            </div>
-          </div>
-          <div class="machines">
-            <div class="row">
-            <div class="machine">
+              <div class="machine <?php echo $locations[3] ?>">
                 <a href="../VendrPHP/PharmacyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -216,7 +215,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine">
+              <div class="machine <?php echo $locations[4] ?>">
                 <a href="../VendrPHP/KearnyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -225,7 +224,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine">
+              <div class="machine <?php echo $locations[0] ?>">
                 <a href="../VendrPHP/SalernoBMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -234,10 +233,11 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-            </div>
+            </div>          
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="../VendrJS/Home.js"></script>
 </html>
