@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $servername = "10.200.2.17";
 $username = "vendr";
 $password = "vendr";
@@ -90,8 +90,10 @@ function findTotal(){
   var itemPriceFour = <?php echo $itemPrice[3]; ?>;
   //console.log(itemPriceOne + ',' + itemPriceTwo+ ',' + itemPriceThree+ ',' + itemPriceFour);
   var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
- console.log(total);
+  //console.log(total);
+  var totalItems = itemOne + itemTwo + itemThree + itemFour;
   document.getElementById('totalPrice').innerHTML = total;
+  document.getElementById('totalItems').innerHTML=totalItems;
 }
 </script>
 
@@ -263,7 +265,7 @@ function findTotal(){
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemOne'>
                     <?php echo $itemName[0]; ?>
                   </p>
 
@@ -275,7 +277,7 @@ function findTotal(){
 
                 </div>
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemTwo'>
                       <?php echo $itemName[1]; ?>
                   </p>
 
@@ -287,7 +289,7 @@ function findTotal(){
 
                 </div>
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemThree'>
                     <?php echo $itemName[2]; ?>
                   </p>
 
@@ -299,14 +301,12 @@ function findTotal(){
 
                 </div>
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemFour'>
                     <?php echo $itemName[3]; ?>
                   </p>
 
                   <p class="cart-item-quantity" id='item4Inventory'> </p>
 <script>
-  
-
 </script>
                   <p class="cart-item-price">
                   <?php echo $itemPrice[3]; ?>
@@ -315,7 +315,7 @@ function findTotal(){
                 </div>
               </div>
             </div>
-            </form>
+            
             <div class="total-row">
               <p class="total">
                 Total
@@ -324,11 +324,18 @@ function findTotal(){
 
               </p>
             </div>
-            
-            <input type="submit" id="pay" value="Pay Here" onclick = "findTotal()">
-            <!--<form action="findTotal()">
-              
-            </form> -->
+            <div class="total-row">
+              <p class="total">
+                Total # of Items
+              </p>
+              <p class="total-price" id="totalItems">
+
+              </p>
+            </div>
+            <input type="submit" id="pay" value="Pay Here">
+            </form>
+            <br />
+            <input type="submit" id="pay" value="~Total" onclick = "findTotal();">
           </div>
       </div>
     </div>

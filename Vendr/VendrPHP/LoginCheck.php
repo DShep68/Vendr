@@ -1,4 +1,5 @@
 <?php
+session_start();
 //echo "Connecting?";
 $servername = "10.200.2.17";
 $usernamedb = "vendr";
@@ -13,7 +14,7 @@ $conn = new mysqli($servername, $usernamedb, $password, $dbname, $dbport);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully <br>";
+//echo "Connected successfully <br>";
 
 
 $username=$_POST['userName']; 
@@ -24,8 +25,10 @@ $result=mysqli_query($conn,$sql);
 $check = mysqli_fetch_array($result);
 
 if(isset($check)){
-    echo 'Successfully logged in...';
+    //echo 'Successfully logged in...';
     header("Location: Home.php");
+    $_SESSION['username'] = $username;
 }else{
-    echo 'User name and password do not match!!!';
+    //echo 'User name and password do not match!!!';
 }
+?>

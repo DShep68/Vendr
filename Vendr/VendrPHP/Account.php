@@ -1,7 +1,18 @@
 <?php
+session_start();
+include 'LoginCheck.php';
+$username = $_SESSION['username'];
+//echo $_SESSION['username'];
 
-require_once 'LoginCheck.php';
-echo $username;
+$sql="SELECT * FROM customer WHERE CustomerUser = '$username'";
+$result=mysqli_query($conn,$sql);
+while($row = mysqli_fetch_assoc($result)) {
+  $nameF[] = $row["CustomerFName"];
+  $nameL[] = $row["CustomerLName"];
+  $email[] = $row["CustomerEmail"];
+  $password[] = $row["CustomerPass"];
+}
+
 ?>
 
 <html id="fullHD">
@@ -35,30 +46,43 @@ echo $username;
               Account Holder
             </label>
             <p>
-              Tony Stark
+              <?php echo $nameF[0]; echo $nameL[0]; ?>
             </p>
             <label>
               Email
             </label>
             <p>
-              Tony.Stark@starkindustries.com
+              <?php echo $email[0]; ?>
             </p>
             <label>
               UserName
             </label>
             <p>
-              <?php echo $user; ?>
+              <?php echo $_SESSION['username']; ?>
             </p>
             <label>
               Password
             </label>
-            <p>
-              *********
+            <p type='password' id="password">
+              <?php echo $password[0]; ?>
             </p>
+            
           </div>
+          <script>
+          //function myFunction() {
+           // var x = document.getElementById("password");
+            //  if (x.type === "password") {
+            //    x.type = "text";
+             // } else {
+            //    x.type = "password";
+            //  }
+         // }
+</script>
+          <!--
           <form action="">
             <input type="submit" id="edit" value="Edit Profile">
           </form>
+-->
       </div>
     </div>
   </body>
