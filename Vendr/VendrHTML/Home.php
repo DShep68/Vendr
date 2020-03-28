@@ -10,7 +10,7 @@
     <div class="nav-bar">
       <div class="row">
         <div class="double-column">
-          <h2 id="vendr">Vendr</h2>
+          <h2 id="vendr">VendrHello</h2>
         </div>
         <div class="column">
           <ul>
