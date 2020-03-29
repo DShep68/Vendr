@@ -25,4 +25,11 @@ $lineThree = $_POST['itemThree'];
 $lineFour = $_POST['itemFour'];
 echo $lineOne;
 ?>
+<script>
+    console.log(sessionStorage.total);
+    var totals = sessionStorage.total;
+    document.getElementById("testArea").innerHTML = totals;
+</script>
+
+<p id="testArea"> </P>
 UNDER CONSTRUCTION

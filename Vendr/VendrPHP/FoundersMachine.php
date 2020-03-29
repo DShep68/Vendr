@@ -89,11 +89,15 @@ function findTotal(){
   var itemPriceThree = <?php echo $itemPrice[2]; ?>;
   var itemPriceFour = <?php echo $itemPrice[3]; ?>;
   //console.log(itemPriceOne + ',' + itemPriceTwo+ ',' + itemPriceThree+ ',' + itemPriceFour);
-  var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
+  var totals = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
   //console.log(total);
-  var totalItems = itemOne + itemTwo + itemThree + itemFour;
-  document.getElementById('totalPrice').innerHTML = total;
-  document.getElementById('totalItems').innerHTML=totalItems;
+  var totalItemss = itemOne + itemTwo + itemThree + itemFour;
+  document.getElementById('totalPrice').innerHTML = totals;
+  document.getElementById('totalItems').innerHTML = totalItemss;
+
+  window.sessionStorage;
+  sessionStorage.total = totals;
+  sessionStorage.totalItems = totalItemss;
 }
 </script>
 
