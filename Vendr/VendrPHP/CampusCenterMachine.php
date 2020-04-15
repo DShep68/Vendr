@@ -53,63 +53,6 @@ function itemImagePuller($item){
 }
 ?>
 
-<script>
-function quantUpdaterItem1() {
-  var x = document.getElementById("number").value;
-  document.getElementById("item1Inventory").innerHTML = 'x' + x ;
- // findTotal();
-}
-
-function quantUpdaterItem2() {
-  var y = document.getElementById("number1").value;
-  document.getElementById("item2Inventory").innerHTML = 'x' + y ;
-  //findTotal();
-}
-
-function quantUpdaterItem3() {
-  var z = document.getElementById("number2").value;
-  document.getElementById("item3Inventory").innerHTML = 'x' + z ;
- // findTotal();
-}
-
-function quantUpdaterItem4() {
-  var a = document.getElementById("number3").value;
-  a = parseInt(a,10);
-  console.log(typeof a);
-  document.getElementById("item4Inventory").innerHTML = 'x' + a ;
- // findTotal();
-}
-
-function findTotal(){
-  var itemOne = document.getElementById('number').value;
-  var itemTwo = document.getElementById('number1').value;
-  var itemThree = document.getElementById('number2').value;
-  var itemFour = document.getElementById('number3').value;
-
-  var itemOne = parseFloat(itemOne);
-  
-  var itemTwo = parseFloat(itemTwo);
-  console.log(itemOne+itemTwo);
-  var itemThree = parseFloat(itemThree);
-  var itemFour = parseFloat(itemFour);
-
-  //console.log(itemOne + itemTwo + itemThree + itemFour);
-  var itemPriceOne = <?php echo $itemPrice[0]; ?>;
-  console.log(typeof itemPriceOne);
-  var itemPriceTwo = <?php echo $itemPrice[1]; ?>;
-  var itemPriceThree = <?php echo $itemPrice[2]; ?>;
-  var itemPriceFour = <?php echo $itemPrice[3]; ?>;
-  //console.log(itemPriceOne + ',' + itemPriceTwo+ ',' + itemPriceThree+ ',' + itemPriceFour);
-  var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
-  //console.log(total);
-  
-  var totalItems = itemOne + itemTwo + itemThree + itemFour;
-  console.log(typeof totalItems);
-  document.getElementById('totalPrice').innerHTML = total;
-  document.getElementById('totalItems').innerHTML=totalItems;
-}
-</script>
-
 <html id="fullHD">
   <head>
     <meta charset="UTF-8">
@@ -319,8 +262,7 @@ function findTotal(){
                   </p>
 
                   <p class="cart-item-quantity" id='item4Inventory'> </p>
-<script>
-</script>
+
                   <p class="cart-item-price">
                   <?php echo $itemPrice[3]; ?>
                   </p>
@@ -352,5 +294,6 @@ function findTotal(){
           </div>
       </div>
     </div>
+    <script src="../VendrJS/Cart.js"></script>
   </body>
 </html>
