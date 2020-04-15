@@ -1,57 +1,36 @@
 
-/*
-var itemOne = document.getElementById('number').value;
-var itemTwo = document.getElementById('number1').value;
-var itemThree = document.getElementById('number2').value;
-var itemFour = document.getElementById('number3').value;
-
-
-
-if(itemOne == ""){
-    itemOne = "0";
-    
-    x[0].style.display = "none";
-
-}
-
-
-if(itemTwo == ""){
-    itemTwo = "0";
-
-    x[1].style.display = "none";
-}
-
-if(itemThree == ""){
-    itemThree = "0";
-
-    x[2].style.display = "none";
-}
-
-if(itemFour == ""){
-    itemFour = "0";
-
-    x[3].style.display = "none";
-}
-*/
-
 var x = document.getElementsByClassName("cart-item-row");
 
 function quantUpdaterItem1() {
     var x = document.getElementById("number").value;
     document.getElementById("item1Inventory").innerHTML = 'x' + x ;
-   // findTotal();
+
+    var price = document.getElementsByClassName("cart-item-price");
+
+    price[0].innerText = itemPriceOne * x;
+
+    findTotal();
   }
   
   function quantUpdaterItem2() {
     var y = document.getElementById("number1").value;
     document.getElementById("item2Inventory").innerHTML = 'x' + y ;
-    //findTotal();
+
+    var price = document.getElementsByClassName("cart-item-price");
+
+    price[1].innerText = itemPriceTwo * y;
+    findTotal();
   }
   
   function quantUpdaterItem3() {
     var z = document.getElementById("number2").value;
     document.getElementById("item3Inventory").innerHTML = 'x' + z ;
-   // findTotal();
+
+    var price = document.getElementsByClassName("cart-item-price");
+
+    price[2].innerText = itemPriceThree * z;
+
+    findTotal();
   }
   
   function quantUpdaterItem4() {
@@ -59,7 +38,11 @@ function quantUpdaterItem1() {
     a = parseInt(a,10);
     console.log(typeof a);
     document.getElementById("item4Inventory").innerHTML = 'x' + a ;
-   // findTotal();
+
+    var price = document.getElementsByClassName("cart-item-price");
+
+    price[0].innerText = itemPriceFour * a;
+    findTotal();
   }
   
   function findTotal(){

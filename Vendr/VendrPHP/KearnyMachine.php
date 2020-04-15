@@ -290,7 +290,6 @@ function itemImagePuller($item){
             <input type="submit" id="pay" value="Pay Here">
             </form>
             <br />
-            <input type="submit" id="pay" value="~Total" onclick = "findTotal();">
           </div>
       </div>
     </div>
