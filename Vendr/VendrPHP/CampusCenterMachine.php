@@ -51,6 +51,7 @@ function itemImagePuller($item){
     echo'you fd up the function call bro';
   }
 }
+
 ?>
 
 <html id="fullHD">
@@ -293,7 +294,14 @@ function itemImagePuller($item){
             <input type="submit" id="pay" value="~Total" onclick = "findTotal();">
           </div>
       </div>
-    </div>
-    <script src="../VendrJS/Cart.js"></script>
+    </div>   
+    <script type="text/javascript">
+     var itemPriceOne = <?php echo $itemPrice[0]; ?>;
+     var itemPriceTwo = <?php echo $itemPrice[1]; ?>;
+     var itemPriceThree = <?php echo $itemPrice[2]; ?>;
+     var itemPriceFour = <?php echo $itemPrice[3]; ?>;
+    </script>
+    <script type="text/javascript" src="../VendrJS/Cart.js"></script>
   </body>
 </html>
+

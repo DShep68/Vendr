@@ -1,3 +1,4 @@
+
 function quantUpdaterItem1() {
     var x = document.getElementById("number").value;
     document.getElementById("item1Inventory").innerHTML = 'x' + x ;
@@ -37,13 +38,6 @@ function quantUpdaterItem1() {
     var itemThree = parseFloat(itemThree);
     var itemFour = parseFloat(itemFour);
   
-    //console.log(itemOne + itemTwo + itemThree + itemFour);
-    var itemPriceOne = <?php echo $itemPrice[0]; ?>;
-    console.log(typeof itemPriceOne);
-    var itemPriceTwo = <?php echo $itemPrice[1]; ?>;
-    var itemPriceThree = <?php echo $itemPrice[2]; ?>;
-    var itemPriceFour = <?php echo $itemPrice[3]; ?>;
-    //console.log(itemPriceOne + ',' + itemPriceTwo+ ',' + itemPriceThree+ ',' + itemPriceFour);
     var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
     //console.log(total);
     
