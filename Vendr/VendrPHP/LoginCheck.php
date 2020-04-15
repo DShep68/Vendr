@@ -19,13 +19,19 @@ echo "Connected successfully <br>";
 $username=$_POST['userName']; 
 $password=$_POST['password'];
 
+
+
+
+
 $sql="SELECT * FROM customer WHERE CustomerUser='$username' AND CustomerPass='$password'";
 $result=mysqli_query($conn,$sql);
 $check = mysqli_fetch_array($result);
 
+echo $check['result'];
+
+
 if(isset($check)){
-    echo 'Successfully logged in...';
-    header("Location: Home.php");
+    header("Location: Account.php");
 }else{
     echo 'User name and password do not match!!!';
 }

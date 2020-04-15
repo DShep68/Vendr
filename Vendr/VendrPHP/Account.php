@@ -1,7 +1,7 @@
 <?php
 
-require_once 'LoginCheck.php';
-echo $username;
+include 'LoginCheck.php';
+echo $userA;
 ?>
 
 <html id="fullHD">
