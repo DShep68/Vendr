@@ -21,7 +21,7 @@ FROM item ,inventory
 WHERE  item.ItemID =inventory.ItemID AND inventory.MachineID = 2;";
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_assoc($result)) {
-  $itemID[] = $row["ItemType"];
+  $itemID[] = $row["ItemID"];
   $itemPrice[] = $row["ItemPrice"];
   $itemName[] = $row["ItemName"];
   $inventroy[] = $row["Quanity"];
@@ -51,6 +51,12 @@ function itemImagePuller($item){
     echo'you fd up the function call bro';
   }
 }
+#testing to see if we can have PHP inside a form, that only sends on click
+echo $itemID[0];
+  if(isset($_POST['checkout'])){
+    $sql = "INSERT INTO cart (CartID, UserID, ItemID, CartItemQuanity) VALUES ('1', '2',$itemID[2],'$_POST[test]');";
+    mysqli_query($conn,$sql);
+  }
 
 ?>
 
@@ -218,7 +224,7 @@ function itemImagePuller($item){
 
           <div class="cart-column">
             <label class="item-counter">Added to Cart</label>
-            <form action="checkout.php" method="post">
+            <form method="post">
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
@@ -262,8 +268,8 @@ function itemImagePuller($item){
                     <?php echo $itemName[3]; ?>
                   </p>
 
-                  <p class="cart-item-quantity" id='item4Inventory'> </p>
-
+                  <p class="cart-item-quantity" name="" id='item4Inventory'> </p>
+<p name ="test"> 2 </p>
                   <p class="cart-item-price">
                   <?php echo $itemPrice[3]; ?>
                   </p>
@@ -288,7 +294,8 @@ function itemImagePuller($item){
 
               </p>
             </div>
-            <input type="submit" id="pay" value="Pay Here">
+            <input type="submit" id="pay" name= "checkout" value="Checkout">
+           
             </form>
             <br />
           </div>
