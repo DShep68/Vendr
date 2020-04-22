@@ -44,6 +44,7 @@ while($row = mysqli_fetch_assoc($result)) {
   $drinksSnacks[] = $row["ItemName"];
 }
 #echo $types[1];
+
 ?>
 <html id="fullHD">
   <head>
@@ -52,6 +53,7 @@ while($row = mysqli_fetch_assoc($result)) {
     <link href='../VendrCSS/Home.css' rel='stylesheet' type='text/css'>
     <link href='../VendrCSS/Navbar.css' rel='stylesheet' type='text/css'>
     <link href='../VendrCSS/Main.css' rel='stylesheet' type='text/css'>
+  
   </head>
   <body>
     <div class="nav-bar">
@@ -79,11 +81,11 @@ while($row = mysqli_fetch_assoc($result)) {
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $types[0] ?>
-                <input type="checkbox">
+                <input type="checkbox" onchange="changeDrink();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $types[1] ?>
-                <input type="checkbox">
+                <input type="checkbox" onchange="changeSnack();">
                 <span class="checkmark"></span>
               </label>
               <!--
@@ -183,7 +185,7 @@ while($row = mysqli_fetch_assoc($result)) {
         <div class="quad-column">
           <div class="machines">
             <div class="row">
-              <div class="machine <?php echo $locations[0] ?>">
+              <div class="machine <?php echo $locations[0] ?> drink pepsi coke sprite fanta">
                 <a href="../VendrPHP/SalernoMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -192,7 +194,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php $locations[1] = str_replace(' ', '', $locations[1]); echo $locations[1]; ?>">
+              <div class="machine <?php $locations[1] = str_replace(' ', '', $locations[1]); echo $locations[1]; ?> drink pepsi coke sprite whiteclaw">
                 <a href="../VendrPHP/CampusCenterMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -201,7 +203,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[2] ?>">
+              <div class="machine <?php echo $locations[2] ?> drink pepsi coke fanta whiteclaw">
                 <a href="../VendrPHP/FoundersMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -210,7 +212,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[3] ?>">
+              <div class="machine <?php echo $locations[3] ?> snack lays trolli fritos cookies">
                 <a href="../VendrPHP/PharmacyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -219,7 +221,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[4] ?>">
+              <div class="machine <?php echo $locations[4] ?> snack lays trolli poptart cookie">
                 <a href="../VendrPHP/KearnyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -228,7 +230,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[0] ?>">
+              <div class="machine <?php echo $locations[0] ?> snack lays trolli fritos poptart">
                 <a href="../VendrPHP/SalernoBMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
