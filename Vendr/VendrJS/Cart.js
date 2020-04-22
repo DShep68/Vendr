@@ -47,10 +47,10 @@ function quantUpdaterItem1() {
   
   function findTotal(){
 
-    itemOne = document.getElementById('number').value;
-    itemTwo = document.getElementById('number1').value;
-    itemThree = document.getElementById('number2').value;
-    itemFour = document.getElementById('number3').value;
+    var itemOne = document.getElementById('number').value;
+    var itemTwo = document.getElementById('number1').value;
+    var itemThree = document.getElementById('number2').value;
+    var itemFour = document.getElementById('number3').value;
     
     if(itemOne > 0){       
         x[0].style.display = "flex"; 
@@ -85,17 +85,33 @@ function quantUpdaterItem1() {
     }
   
     itemOne = parseFloat(itemOne);
-    
     itemTwo = parseFloat(itemTwo);
-    console.log(itemOne+itemTwo);
+    //console.log(itemOne+itemTwo);
     itemThree = parseFloat(itemThree);
     itemFour = parseFloat(itemFour);
   
     var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
-    //console.log(total);
+    console.log(total);
     
     var totalItems = itemOne + itemTwo + itemThree + itemFour;
-    console.log(typeof totalItems);
+    //console.log(typeof totalItems);
+    console.log(itemOne);
     document.getElementById('totalPrice').innerHTML = total;
-    document.getElementById('totalItems').innerHTML=totalItems;
+    document.getElementById('totalItems').innerHTML=" " + totalItems;
+    //load it into the cookies. 
+    setCookie('total', total, 1);
+    setCookie('totalItems', totalItems, 1);
+
+    setCookie('numItemOne', itemOne, 1);
+    setCookie('numItemTwo', itemTwo, 1);
+    setCookie('numItemThree', itemThree, 1);
+    setCookie('numItemFour', itemFour, 1);
+   
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
   }

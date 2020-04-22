@@ -21,13 +21,16 @@ $username=$_POST['userName'];
 $password=$_POST['password'];
 
 $sql="SELECT * FROM customer WHERE CustomerUser='$username' AND CustomerPass='$password'";
-$result=mysqli_query($conn,$sql);
+$result= mysqli_query($conn,$sql);
 $check = mysqli_fetch_array($result);
 
 if(isset($check)){
     //echo 'Successfully logged in...';
     header("Location: Home.php");
     $_SESSION['username'] = $username;
+    $sql1 ="SELECT UserID FROM customer WHERE CustomerUser = '$username'";
+    $result1 =  mysqli_query($conn,$sql1);
+    $_SESSION['userID'] = $id[0];
 }else{
     //echo 'User name and password do not match!!!';
 }

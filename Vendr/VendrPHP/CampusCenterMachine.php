@@ -58,6 +58,11 @@ echo $itemID[0];
     mysqli_query($conn,$sql);
   }
 
+setcookie("itemOne",$itemID[0]);
+setcookie("itemTwo",$itemID[1]);
+setcookie("itemThree",$itemID[2]);
+setcookie("itemFour",$itemID[3]);
+
 ?>
 
 <html id="fullHD">
@@ -224,7 +229,7 @@ echo $itemID[0];
 
           <div class="cart-column">
             <label class="item-counter">Added to Cart</label>
-            <form method="post">
+            <form action="checkout.php" method="post">
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
@@ -288,7 +293,7 @@ echo $itemID[0];
             </div>
             <div class="total-row">
               <p class="total">
-                Total # of Items
+                Total # of Items 
               </p>
               <p class="total-price" id="totalItems">
 
@@ -310,4 +315,3 @@ echo $itemID[0];
     <script type="text/javascript" src="../VendrJS/Cart.js"></script>
   </body>
 </html>
-
