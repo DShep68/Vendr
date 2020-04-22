@@ -35,9 +35,9 @@ function itemImagePuller($item){
     echo' <img src="../VendrIMG/sprite.png" alt="pepsi">';
   }elseif($item == 'Fanta'){
     echo' <img src="../VendrIMG/fanta.jpg" alt="pepsi">';
-  }elseif($item == 'Lays Chips'){
+  }elseif($item == 'Lays'){
     echo' <img src="../VendrIMG/lays.jpg" alt="pepsi">';
-  }elseif($item == 'HeartWorm Gummies'){
+  }elseif($item == 'Gummies'){
     echo' <img src="../VendrIMG/gummies.jpg" alt="pepsi">';
   }elseif($item == 'Fritos'){
     echo' <img src="../VendrIMG/fritos.jpg" alt="pepsi">';
@@ -45,7 +45,7 @@ function itemImagePuller($item){
     echo' <img src="../VendrIMG/poptart.jpg" alt="pepsi">';
   }elseif($item == 'Cookies'){
     echo' <img src="../VendrIMG/cookies.jpg" alt="pepsi">';
-  }elseif($item == 'White Claw'){
+  }elseif($item == 'WhiteClaw'){
     echo' <img src="../VendrIMG/whiteclaw.jpg" alt="pepsi">';
   }else{
     echo'you fd up the function call bro';
@@ -62,6 +62,7 @@ setcookie("itemOne",$itemID[0]);
 setcookie("itemTwo",$itemID[1]);
 setcookie("itemThree",$itemID[2]);
 setcookie("itemFour",$itemID[3]);
+setcookie("machineID", 2);
 
 ?>
 
