@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $servername = "10.200.2.17";
 $username = "vendr";
 $password = "vendr";
@@ -52,48 +52,6 @@ function itemImagePuller($item){
   }
 }
 ?>
-
-<script>
-function quantUpdaterItem1() {
-  var x = document.getElementById("number").value;
-  document.getElementById("item1Inventory").innerHTML = 'x' + x ;
- // findTotal();
-}
-
-function quantUpdaterItem2() {
-  var y = document.getElementById("number1").value;
-  document.getElementById("item2Inventory").innerHTML = 'x' + y ;
-  //findTotal();
-}
-
-function quantUpdaterItem3() {
-  var z = document.getElementById("number2").value;
-  document.getElementById("item3Inventory").innerHTML = 'x' + z ;
- // findTotal();
-}
-
-function quantUpdaterItem4() {
-  var a = document.getElementById("number3").value;
-  document.getElementById("item4Inventory").innerHTML = 'x' + a ;
- // findTotal();
-}
-
-function findTotal(){
-  var itemOne = document.getElementById('number').value;
-  var itemTwo = document.getElementById('number1').value;
-  var itemThree = document.getElementById('number2').value;
-  var itemFour = document.getElementById('number3').value;
-  //console.log(itemOne + itemTwo + itemThree + itemFour);
-  var itemPriceOne = <?php echo $itemPrice[0]; ?>;
-  var itemPriceTwo = <?php echo $itemPrice[1]; ?>;
-  var itemPriceThree = <?php echo $itemPrice[2]; ?>;
-  var itemPriceFour = <?php echo $itemPrice[3]; ?>;
-  //console.log(itemPriceOne + ',' + itemPriceTwo+ ',' + itemPriceThree+ ',' + itemPriceFour);
-  var total = (itemOne*itemPriceOne) + (itemTwo*itemPriceTwo) + (itemThree*itemPriceThree) + (itemFour*itemPriceFour);
- console.log(total);
-  document.getElementById('totalPrice').innerHTML = total;
-}
-</script>
 
 <html id="fullHD">
   <head>
@@ -263,7 +221,7 @@ function findTotal(){
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemOne'>
                     <?php echo $itemName[0]; ?>
                   </p>
 
@@ -275,7 +233,7 @@ function findTotal(){
 
                 </div>
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemTwo'>
                       <?php echo $itemName[1]; ?>
                   </p>
 
@@ -287,7 +245,7 @@ function findTotal(){
 
                 </div>
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemThree'>
                     <?php echo $itemName[2]; ?>
                   </p>
 
@@ -299,15 +257,12 @@ function findTotal(){
 
                 </div>
                 <div class="cart-item-row">
-                  <p class="cart-item-name">
+                  <p class="cart-item-name" id='itemFour'>
                     <?php echo $itemName[3]; ?>
                   </p>
 
                   <p class="cart-item-quantity" id='item4Inventory'> </p>
-<script>
-  
 
-</script>
                   <p class="cart-item-price">
                   <?php echo $itemPrice[3]; ?>
                   </p>
@@ -315,7 +270,7 @@ function findTotal(){
                 </div>
               </div>
             </div>
-            </form>
+            
             <div class="total-row">
               <p class="total">
                 Total
@@ -324,13 +279,26 @@ function findTotal(){
 
               </p>
             </div>
-            
-            <input type="submit" id="pay" value="Pay Here" onclick = "findTotal()">
-            <!--<form action="findTotal()">
-              
-            </form> -->
+            <div class="total-row">
+              <p class="total">
+                Total # of Items
+              </p>
+              <p class="total-price" id="totalItems">
+
+              </p>
+            </div>
+            <input type="submit" id="pay" value="Pay Here">
+            </form>
+            <br />
           </div>
       </div>
     </div>
+    <script type="text/javascript">
+     var itemPriceOne = <?php echo $itemPrice[0]; ?>;
+     var itemPriceTwo = <?php echo $itemPrice[1]; ?>;
+     var itemPriceThree = <?php echo $itemPrice[2]; ?>;
+     var itemPriceFour = <?php echo $itemPrice[3]; ?>;
+    </script>
+    <script type="text/javascript" src="../VendrJS/Cart.js"></script>
   </body>
 </html>
