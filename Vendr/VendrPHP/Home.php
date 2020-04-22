@@ -81,11 +81,11 @@ while($row = mysqli_fetch_assoc($result)) {
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $types[0] ?>
-                <input type="checkbox" onchange="changeDrink();">
+                <input type="checkbox" rel="<?php echo $types[0] ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $types[1] ?>
-                <input type="checkbox" onchange="changeSnack();">
+                <input type="checkbox" rel="<?php echo $types[1] ?>" onchange="change();">
                 <span class="checkmark"></span>
               </label>
               <!--
@@ -134,7 +134,7 @@ while($row = mysqli_fetch_assoc($result)) {
             <div class="category-title">Drinks</div>
             <div class="items">
               <label class="container"><?php echo $drinksSnacks[0] ?>
-                <input type="checkbox">
+                <input type="checkbox" onchange="changePepsi();">
                 <span class="checkmark"></span>
               </label>
               <label class="container"><?php echo $drinksSnacks[1] ?>
@@ -185,7 +185,7 @@ while($row = mysqli_fetch_assoc($result)) {
         <div class="quad-column">
           <div class="machines">
             <div class="row">
-              <div class="machine <?php echo $locations[0] ?> drink pepsi coke sprite fanta">
+              <div class="machine <?php echo $locations[0] ?> Drink pepsi coke sprite fanta">
                 <a href="../VendrPHP/SalernoMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -194,7 +194,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php $locations[1] = str_replace(' ', '', $locations[1]); echo $locations[1]; ?> drink pepsi coke sprite whiteclaw">
+              <div class="machine <?php $locations[1] = str_replace(' ', '', $locations[1]); echo $locations[1]; ?> Drink pepsi coke sprite whiteclaw">
                 <a href="../VendrPHP/CampusCenterMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -203,7 +203,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[2] ?> drink pepsi coke fanta whiteclaw">
+              <div class="machine <?php echo $locations[2] ?> Drink pepsi coke fanta whiteclaw">
                 <a href="../VendrPHP/FoundersMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -212,7 +212,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[3] ?> snack lays trolli fritos cookies">
+              <div class="machine <?php echo $locations[3] ?> Snack lays trolli fritos cookies">
                 <a href="../VendrPHP/PharmacyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -221,7 +221,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[4] ?> snack lays trolli poptart cookie">
+              <div class="machine <?php echo $locations[4] ?> Snack lays trolli poptart cookie">
                 <a href="../VendrPHP/KearnyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -230,7 +230,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[0] ?> snack lays trolli fritos poptart">
+              <div class="machine <?php echo $locations[0] ?> Snack lays trolli fritos poptart">
                 <a href="../VendrPHP/SalernoBMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
