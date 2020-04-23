@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 //GLOBAL VARS:
     $servername = "10.200.2.17";
@@ -73,7 +74,7 @@ $numItemFour = $_COOKIE["numItemFour"];
     //echo $numItemFour;
     //echo $orderID;
     //echo $cartID;
-/*
+
 if($numItemOne>0){
     $sql2 ="INSERT INTO cart (cartID, UserID, ItemID, 
     CartItemQuanity) VALUES ('$cartID','$userID',
@@ -116,7 +117,7 @@ if($numItemFour>0){
         echo "Error: " . $sql5 . "<br>" . $conn->error;
     }
 }
-*/
+
 
 //generate the random code
 function random_verify($limit)
@@ -126,8 +127,8 @@ function random_verify($limit)
 $code = random_verify(6);
 echo "<script> alert('$code') </script>";
 
-//maybe i need to pull from cart to see how many orders there are?
 
+//send information to the orders table. 
 if($numItemOne>0){
     $updateOrders ="INSERT INTO orders (OrderID, OrderItemQuanity, TotalPrice, 
         VendingCode, ItemID, MachineID, CartID) VALUES ('$orderID','$numItemOne',
@@ -168,6 +169,7 @@ if($numItemFour>0){
         echo "Error: " . $updateOrders . "<br>" . $conn->error;
     }
 }
+*/
 ?>
 
 <p id="testArea"> </P>

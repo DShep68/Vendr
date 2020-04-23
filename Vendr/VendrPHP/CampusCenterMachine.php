@@ -230,7 +230,7 @@ setcookie("machineID", 2);
 
           <div class="cart-column">
             <label class="item-counter">Added to Cart</label>
-            <form action="checkout.php" method="post">
+            <form action="Confirmation.php" method="post">
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
