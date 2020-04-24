@@ -38,26 +38,68 @@
   while($row = mysqli_fetch_assoc($result0)) {
     $ordersID[] = $row["OrderID"];
     $ordersItemID[] = $row["ItemID"];
+    $ordersItemQuantity[] = $row["OrderItemQuanity"];
+    $ordersTotalPrice[] = $row["TotalPrice"];
   }
 
 
 $numberOfOrders = sizeof($orderID);
 setcookie("numOrders",$numberOfOrders);
 
-//need: itemID(item name), item quant, item price, order total.
+echo "<br>";
 
-//grabbing info from item:
-$in = '(' . implode(',', $ordersItemID) .')';
+foreach($orderID as $value){
 
-$sql = "SELECT item.ItemPrice,item.ItemName
-FROM item WHERE item.itemID IN " . $in;
-$result = mysqli_query($conn,$sql);
-while($row = mysqli_fetch_assoc($result)) {
-  $itemPrice[] = $row["ItemPrice"];
-  $itemName[] = $row["ItemName"];
+  echo " orderId: ". $value . "<br>";
+
 }
 
-$one = 1;
+echo "<br>";
+
+$count=0;
+
+foreach($ordersID as $value){
+
+  $count = $count +1;
+  echo $count . " ordersId: ". $value . "<br>";
+
+}
+
+echo "<br>";
+
+$count=0;
+
+foreach($ordersItemID as $value){
+
+  $count = $count +1;
+  echo $count . " ordersItemsId: ". $value . "<br>";
+
+}
+
+echo "<br>";
+
+$count=0;
+
+foreach($ordersItemQuantity as $value){
+
+  $count = $count +1;
+  echo $count . " ordersItemQuantity: ". $value . "<br>";
+
+}
+
+echo "<br>";
+
+$count=0;
+
+foreach($ordersTotalPrice as $value){
+
+  $count = $count +1;
+  echo $count . " ordersTotalPrice: ". $value . "<br>";
+
+}
+
+
+
 
 ?>
 
@@ -85,23 +127,52 @@ $one = 1;
       </div>
     </div>
     <div>
-      <button id="order0" type="button" class="collapsible"> <?php echo "Order #: " , $orderID[$numberOfOrders-1]; 
-      $tempOrderID = $orderID[$numberOfOrders-1]; 
-      //grabs itemID and total price from orders table where the orderID is =
-      $findOrderTotal = "SELECT TotalPrice, OrderItemQuanity FROM orders WHERE OrderID = '$orderID[$tempOrderID]';";
-      $resultOrders = mysqli_query($conn,$findOrderTotal);
-      while($row1 = mysqli_fetch_assoc($resultOrders)) {
-        $TotalPrice[] = $row1["TotalPrice"];
-        $OrderItemQuant[] = $row1["OrderItemQuanity"];}
-        echo $TotalPrice[0];?> 
+      <button id="order0" type="button" class="collapsible"> <?php echo "Order #: " , $orderID[$numberOfOrders-1]; ?> 
       </button>
       <div class="content">
         <div class="cart-column">
-          <div class="cart-module-row">
+          <div id="item0" class="cart-module-row">
             <div class="column">
+              <?php
+                $temp = $numberOfOrders-1;
+                echo "temp index: ". $temp;
+                $hi = "SELECT * FROM orders WHERE OrderID = '$orderID[$temp]'" ;
+                $result01=mysqli_query($conn,$hi);
+
+                echo "order id: ". $orderID[$temp];
+                
+                while($row = mysqli_fetch_assoc($result01)) {
+                  $SPECordersItemID[] = $row["ItemID"];
+                  $SPECordersItemQuantity[] = $row["OrderItemQuanity"];
+                  $SPECordersTotalPrice[] = $row["TotalPrice"];
+                }
+                
+                
+                  echo "<br>";
+
+                  $count=0;
+
+                  foreach($SPECordersItemID as $value){
+
+                    $count = $count +1;
+                    echo $count . " spec items id: ". $value . "<br>";
+
+                  }
+
+                $itemsOrdered = sizeof($SPECordersItemID);
+
+                $temp2 = $itemsOrdered;
+
+                echo "temp2: ". $temp2;
+                
+                $sql2 = "SELECT item.ItemName FROM item WHERE item.ItemID = '$SPECordersItemID[$temp2]'";
+                $result= mysqli_query($conn,$sql2);
+                $check = mysqli_fetch_array($result);
+                
+              ?>
               <div class="cart-item-row">
                 <p class="cart-item-name">
-                  Pepsi
+                  <?php echo $check[0]; ?>
                 </p>
                 <p class="cart-item-quantity">
                   x4
@@ -112,7 +183,7 @@ $one = 1;
               </div>
               <div class="cart-item-row">
                 <p class="cart-item-name">
-                  Pepsi
+                  happy
                 </p>
                 <p class="cart-item-quantity">
                   x4
@@ -123,7 +194,7 @@ $one = 1;
               </div>
               <div class="cart-item-row">
                 <p class="cart-item-name">
-                  Pepsi
+                  happy
                 </p>
                 <p class="cart-item-quantity">
                   x4
@@ -696,5 +767,5 @@ $one = 1;
       }
       return "";
     }
-</script>
+  </script>
 </html>
