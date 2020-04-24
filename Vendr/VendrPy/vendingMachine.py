@@ -1,3 +1,4 @@
+import MySQLdb
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -9,8 +10,8 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-#2.7 version-- vendingCode = raw_input("Please enter validation key below:\n")
-vendingCode = input("Please enter validation key below:\n")
+vendingCode = raw_input("Please enter validation key below:")
+#vendingCode = input("Please enter validation key below:\n")
 mycursor.execute("SELECT OrderID FROM validation WHERE VendingCode = %s", (vendingCode,))
 
 orderIDArr = mycursor.fetchall()
@@ -44,7 +45,7 @@ elif numItems == 1:
 
     itemNameOne = itemNameArray[0]
 
-    print("\n Dispensing your order of:", itemNameOne)
+    print("Dispensing your order of:", itemNameOne)
     print("\n Thank you for your purchase have a nice day!")
 
 
