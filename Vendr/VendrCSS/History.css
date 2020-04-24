@@ -17,15 +17,6 @@
   background-color: #555;
 }
 
-.collapsible::after {
-  content: " 12/12/12";
-  color: #ffffff;
-  font-family: "Segoe UI";
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  float:right;
-}
 
 .content {
   padding: 0 18px;
