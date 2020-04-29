@@ -52,7 +52,7 @@ function itemImagePuller($item){
   }
 }
 #testing to see if we can have PHP inside a form, that only sends on click
-echo $itemID[0];
+
   if(isset($_POST['checkout'])){
     $sql = "INSERT INTO cart (CartID, UserID, ItemID, CartItemQuanity) VALUES ('1', '2',$itemID[2],'$_POST[test]');";
     mysqli_query($conn,$sql);

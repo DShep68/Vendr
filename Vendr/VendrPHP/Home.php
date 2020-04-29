@@ -212,7 +212,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[3] ?> Snack Lays Trolli Fritos Cookies">
+              <div class="machine <?php echo $locations[3] ?> Snack Lays Gummies Fritos Cookies">
                 <a href="../VendrPHP/PharmacyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -221,7 +221,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[4] ?> Snack Lays Trolli Poptart Cookies">
+              <div class="machine <?php echo $locations[4] ?> Snack Lays Gummies Poptart Cookies">
                 <a href="../VendrPHP/KearnyMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">
@@ -230,7 +230,7 @@ while($row = mysqli_fetch_assoc($result)) {
                   </div>
                 </a>
               </div>
-              <div class="machine <?php echo $locations[0] ?> Snack Lays Trolli Fritos Poptart">
+              <div class="machine <?php echo $locations[0] ?> Snack Lays Gummies Fritos Poptart">
                 <a href="../VendrPHP/SalernoBMachine.php">
                   <div class="column">
                     <img src="../VendrIMG/machine.png" alt="Machine">

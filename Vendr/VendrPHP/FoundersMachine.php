@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $servername = "10.200.2.17";
 $username = "vendr";
 $password = "vendr";
@@ -21,7 +21,7 @@ FROM item ,inventory
 WHERE  item.ItemID =inventory.ItemID AND inventory.MachineID = 3;";
 $result = mysqli_query($conn,$sql);
 while($row = mysqli_fetch_assoc($result)) {
-  $itemID[] = $row["ItemType"];
+  $itemID[] = $row["ItemID"];
   $itemPrice[] = $row["ItemPrice"];
   $itemName[] = $row["ItemName"];
   $inventroy[] = $row["Quanity"];
@@ -51,6 +51,19 @@ function itemImagePuller($item){
     echo'you fd up the function call bro';
   }
 }
+#testing to see if we can have PHP inside a form, that only sends on click
+
+  if(isset($_POST['checkout'])){
+    $sql = "INSERT INTO cart (CartID, UserID, ItemID, CartItemQuanity) VALUES ('1', '2',$itemID[2],'$_POST[test]');";
+    mysqli_query($conn,$sql);
+  }
+
+setcookie("itemOne",$itemID[0]);
+setcookie("itemTwo",$itemID[1]);
+setcookie("itemThree",$itemID[2]);
+setcookie("itemFour",$itemID[3]);
+setcookie("machineID", 2);
+
 ?>
 
 <html id="fullHD">
@@ -217,7 +230,7 @@ function itemImagePuller($item){
 
           <div class="cart-column">
             <label class="item-counter">Added to Cart</label>
-            <form action="checkout.php" method="post">
+            <form action="Confirmation.php" method="post">
             <div class="cart-module-row">
               <div class="column">
                 <div class="cart-item-row">
@@ -261,8 +274,8 @@ function itemImagePuller($item){
                     <?php echo $itemName[3]; ?>
                   </p>
 
-                  <p class="cart-item-quantity" id='item4Inventory'> </p>
-
+                  <p class="cart-item-quantity" name="" id='item4Inventory'> </p>
+<p name ="test"> 2 </p>
                   <p class="cart-item-price">
                   <?php echo $itemPrice[3]; ?>
                   </p>
@@ -281,18 +294,19 @@ function itemImagePuller($item){
             </div>
             <div class="total-row">
               <p class="total">
-                Total # of Items
+                Total # of Items 
               </p>
               <p class="total-price" id="totalItems">
 
               </p>
             </div>
-            <input type="submit" id="pay" value="Pay Here">
+            <input type="submit" id="pay" name= "checkout" value="Checkout">
+           
             </form>
             <br />
           </div>
       </div>
-    </div>
+    </div>   
     <script type="text/javascript">
      var itemPriceOne = <?php echo $itemPrice[0]; ?>;
      var itemPriceTwo = <?php echo $itemPrice[1]; ?>;

@@ -269,7 +269,7 @@ if($numItemFour>0){
             </label>
             <p id="vending-code"> <?php echo $orderID ?> </p>
           </div>
-          <a href="../VendrHTML/Home.html"> Back Home </a>
+          <a href="../VendrPHP/Home.php"> Back Home </a>
       </div>
     </div>
   </body>
