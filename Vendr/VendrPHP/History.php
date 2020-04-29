@@ -97,10 +97,16 @@ setcookie("numOrders",$numberOfOrders);
                 $itemsOrdered = sizeof($SPECordersItemID);
 
                 $temp2 = $itemsOrdered;
+
+                $int = '(' . implode(',', $SPECordersItemID) .')';
                 
-                $sql2 = "SELECT item.ItemName FROM item WHERE item.ItemID = '$SPECordersItemID[$temp2]'";
+                $sql2 = "SELECT * FROM item WHERE item.ItemID IN " .$int;
                 $result= mysqli_query($conn,$sql2);
-                $check = mysqli_fetch_array($result);
+
+                while($row = mysqli_fetch_assoc($result)) {
+                  $check[] = $row["ItemName"];
+                }
+                
                 
               ?>
               <div class="cart-item-row">
