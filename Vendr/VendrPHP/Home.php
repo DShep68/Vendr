@@ -104,10 +104,6 @@ while($row = mysqli_fetch_assoc($result)) {
             <div class="category-title">Location
             </div>
             <div class="items">
-            <label class="container">Show All
-                <input type="checkbox" checked="checked">
-                <span class="checkmark"></span>
-              </label>
               <label class="container"><?php echo $locations[0] ?>
                 <input type="checkbox" rel="<?php echo $locations[0] ?>" onchange="change();">
                 <span class="checkmark"></span>
