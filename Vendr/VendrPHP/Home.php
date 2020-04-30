@@ -1,6 +1,6 @@
 <?php
 
-$servername = "10.200.2.17";
+$servername = "w2k12-compscidb.academia.sjfc.edu";
 $username = "vendr";
 $password = "vendr";
 $dbname = 'vendr';

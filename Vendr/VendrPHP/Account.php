@@ -1,7 +1,24 @@
 <?php
 session_start();
-include 'LoginCheck.php';
+#include 'LoginCheck.php';
+$servername = "w2k12-compscidb.academia.sjfc.edu";
+$username = "vendr";
+$password = "vendr";
+$dbname = 'vendr';
+$dbport = '3306';
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname, $dbport);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
 $username = $_SESSION['username'];
+//echo "test";
+//echo $username;
 //echo $_SESSION['username'];
 
 $sql="SELECT * FROM customer WHERE CustomerUser = '$username'";
@@ -10,7 +27,7 @@ while($row = mysqli_fetch_assoc($result)) {
   $nameF[] = $row["CustomerFName"];
   $nameL[] = $row["CustomerLName"];
   $email[] = $row["CustomerEmail"];
-  $password[] = $row["CustomerPass"];
+  $userPassword[] = $row["CustomerPass"];
 }
 
 ?>
@@ -64,7 +81,7 @@ while($row = mysqli_fetch_assoc($result)) {
               Password
             </label>
             <p type='password' id="password">
-              <?php echo $password[0]; ?>
+              <?php echo $userPassword[0]; ?>
             </p>
             
           </div>
